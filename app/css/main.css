@@ -1,0 +1,269 @@
+/*
+Site Name: 
+Version: 1.0
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300&subset=cyrillic");
+/* -----------------------------------------------------------------------------
+
+  													BOX SIZING RESET
+  
+----------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* -----------------------------------------------------------------------------
+
+  Clearfix 
+
+----------------------------------------------------------------------------- */
+.clearfix::before, .clearfix::after {
+  content: " ";
+  display: table;
+  clear: both; }
+
+/* ----------------------------------------------------------------------------- 
+ 
+  				         	FONTS
+ 
+----------------------------------------------------------------------------- */
+/* -----------------------------------------------------------------------------
+
+                				VARIABLES
+  
+----------------------------------------------------------------------------- */
+/*fonts*/
+/*colors*/
+/* -----------------------------------------------------------------------------
+
+                								MIXINS
+  
+----------------------------------------------------------------------------- */
+/*------------------------------------------------------------------------------
+
+																MAIN STYLES                             
+
+------------------------------------------------------------------------------*/
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
+html {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+  font-size: 10px; }
+
+::-moz-selection {
+  background-color: #0a0a0a;
+  text-shadow: none;
+  color: #a3c0ff; }
+
+::selection {
+  background-color: #0a0a0a;
+  text-shadow: none;
+  color: #a3c0ff; }
+
+.main-wrapper {
+  padding: 0 15px 0 15px;
+  min-width: 320px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100%; }
+
+.wrapper {
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; }
+
+/* titles */
+h1 {
+  font-size: 2rem; }
+
+h2 {
+  font-size: 1.8rem; }
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 400; }
+
+p {
+  font-size: 1.4rem; }
+
+/* text position */
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.nowrap {
+  white-space: nowrap; }
+
+/* loader */
+.loaded .main-wrapper {
+  visibility: hidden; }
+
+.icon-load {
+  background: url(../img/loader3.gif) no-repeat left top;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  margin-left: -20px;
+  margin-left: -20px;
+  display: none; }
+
+.loaded .icon-load {
+  display: block; }
+
+/*------------------------------------------------------------------------------
+
+                             				HEADER             
+                                     
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
+                                     
+                                     CONTENT                             
+                                     
+------------------------------------------------------------------------------*/
+body {
+  background-color: #d0e2f0; }
+
+.box {
+  margin: 50px auto;
+  padding: 15px;
+  text-align: center;
+  max-width: 650px;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden; }
+
+.box--test {
+  width: 100%; }
+
+.quiz-start_content {
+  padding: 15px; }
+  .quiz-start_content h1 {
+    font-size: 2.4rem; }
+  .quiz-start_content #submit {
+    font-size: 2rem; }
+
+.instr {
+  font-size: 1.8rem;
+  text-align: justify; }
+
+.attent {
+  color: #d50000; }
+
+.test-questions {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .test-questions > li {
+    display: none; }
+  .test-questions > li.active {
+    display: block; }
+
+.button-answer label {
+  display: block;
+  width: 50%;
+  margin: 10px auto;
+  background-color: #98db8a;
+  font-size: 2rem;
+  padding: 15px;
+  margin: 5px auto; }
+
+.button-answer input[type="radio"] {
+  visibility: hidden; }
+
+.button-answer input[type="radio"]:checked + label {
+  background-color: #ffcece; }
+
+.next {
+  font-size: 2rem;
+  height: 50px;
+  width: 30%; }
+
+.send {
+  font-size: 2rem;
+  height: 50px;
+  width: 50%; }
+
+.next.hidden {
+  display: none; }
+
+.graph {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.point {
+  position: absolute;
+  -webkit-transform: translateX(-50%) translateY(50%);
+  -ms-transform: translateX(-50%) translateY(50%);
+  transform: translateX(-50%) translateY(50%); }
+
+.graph-container {
+  position: relative;
+  max-width: 600px;
+  max-height: 600px; }
+
+.again {
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+  font-size: 3rem;
+  text-decoration: none; }
+
+/*------------------------------------------------------------------------------
+
+                                 FOOTER                                 
+                                     
+------------------------------------------------------------------------------*/
+/* -----------------------------------------------------------------------------
+
+															RESPONSIVE  (mobile first)  
+
+----------------------------------------------------------------------------- */
+/* Custom */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+/* -----------------------------------------------------------------------------
+
+															RESPONSIVE  (desktop first)  
+
+----------------------------------------------------------------------------- */
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom */
+/*------------------- highlighting -------------------------*/
+.outl-blue {
+  outline: 1px solid blue; }
+
+.outl-green {
+  outline: 1px solid green; }
+
+.outl-gold {
+  outline: 1px solid gold; }
+
+.outl-red {
+  outline: 1px solid red; }
+
+/*------------------- end highlighting -------------------------*/

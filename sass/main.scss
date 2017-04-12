@@ -1,0 +1,399 @@
+/*
+Site Name: 
+Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300&subset=cyrillic');
+
+/* -----------------------------------------------------------------------------
+
+  													BOX SIZING RESET
+  
+----------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/* -----------------------------------------------------------------------------
+
+  Clearfix 
+
+----------------------------------------------------------------------------- */
+
+.clearfix {
+  &::before, &::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+/* ----------------------------------------------------------------------------- 
+ 
+  				         	FONTS
+ 
+----------------------------------------------------------------------------- */
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+
+                				VARIABLES
+  
+----------------------------------------------------------------------------- */
+
+/*fonts*/
+
+$font-main: 'Roboto Slab', Arial, Helvetica, sans-serif;
+
+/*colors*/
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+
+                								MIXINS
+  
+----------------------------------------------------------------------------- */
+
+// @mixin prefix($property, $values, $prefixes: ()) {
+//   @each $prefix in $prefixes {
+//     #{'-' + $prefix + '-' + $property}: $values;
+//   }
+  
+//   #{$property}: $values;    // Output standard non-prefixed declaration
+// }
+// usage
+// .selector {
+//   @include prefix(transform, rotate(45deg) skew(30deg), webkit ms);
+// }
+
+
+/*------------------------------------------------------------------------------
+
+																MAIN STYLES                             
+
+------------------------------------------------------------------------------*/
+
+html, body {
+   height: 100%;
+   width : 100%;
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+
+html {
+	font-family: $font-main;
+	font-size: 10px;
+}
+
+::-moz-selection {
+  background-color: rgba(10,10,10,1);
+  text-shadow: none;
+  color: rgba(163, 192, 255, 1);
+}
+
+::selection {
+  background-color: rgba(10,10,10,1);
+  text-shadow: none;
+  color: rgba(163, 192, 255, 1);
+} 
+
+.main-wrapper {
+	padding: 0 15px 0 15px;
+	min-width: 320px;
+	position: relative;
+	overflow: hidden;
+	min-height:100%;
+}
+
+.wrapper {
+	min-width: 320px;
+	max-width: 1200px;
+	//padding: 0 45px 0 45px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* titles */
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.8rem;
+
+}
+h3 {
+	font-size: 1.6rem;
+	font-weight: 400;
+}
+
+p {
+	font-size: 1.4rem;
+}
+
+/* text position */
+.text-left{text-align: left;}
+.text-center{text-align: center;}
+.text-right{text-align: right;}
+.nowrap{white-space: nowrap;}
+
+
+/* loader */
+.loaded .main-wrapper {
+	visibility:hidden;
+}
+.icon-load {
+	background:url(../img/loader3.gif) no-repeat left top;
+	width:40px;height:40px;position:fixed;
+	left:50%;
+	top:20px;
+	margin-left:-20px;
+	margin-left:-20px;
+	display:none;
+}
+.loaded .icon-load {
+	display:block;
+}
+
+
+/*------------------------------------------------------------------------------
+
+                             				HEADER             
+                                     
+------------------------------------------------------------------------------*/
+
+
+
+
+/*------------------------------------------------------------------------------
+                                     
+                                     CONTENT                             
+                                     
+------------------------------------------------------------------------------*/
+
+body {
+	background-color: #d0e2f0;
+}
+
+.box {
+	margin: 50px auto;
+	padding: 15px;
+	text-align: center;
+	max-width: 650px;
+	position: relative;
+	background-color: #fff;
+	overflow: hidden;
+}
+.box--test {
+	width: 100%;
+}
+
+.quiz-start_content {
+	padding: 15px;
+
+	h1 {
+		font-size: 2.4rem;
+	}
+
+	#submit {
+		font-size: 2rem;
+	}
+}
+
+.instr {
+	font-size: 1.8rem;
+	text-align: justify;
+}
+
+.attent {
+	color: #d50000;
+}
+
+.test-questions {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	& > li {
+		display: none;
+	}
+	& > li.active {
+		display: block;
+	}
+}
+
+.button-answer {
+	label {
+		display: block;
+		width: 50%;
+    	margin: 10px auto;
+    	background-color: #98db8a;
+    	font-size: 2rem;
+	    padding: 15px;
+	    margin: 5px auto;
+	}
+
+	input[type="radio"]{
+		visibility: hidden;
+	}
+
+	input[type="radio"]:checked + label{
+		background-color: #ffcece;
+	}
+}
+
+.next {
+	font-size: 2rem;
+	height: 50px;
+    width: 30%;
+}
+
+.send{
+	font-size: 2rem;
+	height: 50px;
+    width: 50%;
+}
+
+.next.hidden {
+	display: none;
+}
+
+.graph {
+	display: block;
+	width: 100%;
+	height: auto;
+	//position: absolute;
+}
+.point {
+	position: absolute;
+	transform: translateX(-50%) translateY(50%);
+}
+.graph-container {
+	position: relative;
+	max-width: 600px;
+	max-height: 600px;
+}
+.again {
+	display: block;
+	margin: 20px auto;
+	cursor: pointer;
+	font-size: 3rem;
+	text-decoration: none;
+
+}
+
+/*------------------------------------------------------------------------------
+
+                                 FOOTER                                 
+                                     
+------------------------------------------------------------------------------*/
+
+.main-footer {
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+
+															RESPONSIVE  (mobile first)  
+
+----------------------------------------------------------------------------- */
+
+
+
+/* Custom */ 
+@media (min-width : 320px) {
+    
+}
+
+/* Extra Small Devices, Phones */ 
+@media (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media (min-width : 1200px) {
+
+}
+
+
+/* -----------------------------------------------------------------------------
+
+															RESPONSIVE  (desktop first)  
+
+----------------------------------------------------------------------------- */
+
+/* Large Devices, Wide Screens */
+@media (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media (max-width : 480px) {
+
+}
+
+/* Custom */ 
+@media (max-width : 320px) {
+    
+}
+
+
+
+
+/*------------------- highlighting -------------------------*/
+
+.outl-blue {
+  outline: 1px solid blue;
+}
+
+.outl-green {
+  outline: 1px solid green;
+}
+
+.outl-gold {
+  outline: 1px solid gold;
+}
+
+.outl-red {
+  outline: 1px solid red;
+}
+
+
+/*------------------- end highlighting -------------------------*/
