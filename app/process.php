@@ -22,12 +22,12 @@
 
 
 
-$extravert_yes_indeces = array(1, 3, 8, 10, 13, 17, 22, 25, 27, 39, 44, 46, 49, 53, 56);
-$extravert_no_indeces = array(5, 15, 20, 29, 32, 37, 41, 51);
-$neurotism_yes_indeces = array(2, 4, 7, 9, 11, 14, 16, 19, 21, 23, 26, 28, 31, 33, 35, 38, 40, 43, 45, 47, 50, 52, 55, 57);
+$extravert_yes_indices = array(1, 3, 8, 10, 13, 17, 22, 25, 27, 39, 44, 46, 49, 53, 56);
+$extravert_no_indices = array(5, 15, 20, 29, 32, 37, 41, 51);
+$neurotism_yes_indices = array(2, 4, 7, 9, 11, 14, 16, 19, 21, 23, 26, 28, 31, 33, 35, 38, 40, 43, 45, 47, 50, 52, 55, 57);
 
-$lie_yes_indeces = array(6, 24, 36);
-$lie_no_indeces = array(12, 18, 30, 42, 48, 54 );
+$lie_yes_indices = array(6, 24, 36);
+$lie_no_indices = array(12, 18, 30, 42, 48, 54 );
 
 $extravert_yes_sum = 0;
 $extravert_no_sum = 0;
@@ -43,27 +43,27 @@ for ($index = 0; $index <= count($answersValues)-1; $index++) {
 	$value = $answersValues[$index];
 
 	
-	if (in_array($index+1, $extravert_yes_indeces)) { // if there is a match between index of question in $answersValues 
-	  	if($value == "yes") {						  // and value in $extravert_yes_indeces, we then check if it "yes", and then increment a sum
+	if (in_array($index+1, $extravert_yes_indices)) { // if there is a match between index of question in $answersValues 
+	  	if($value == "yes") {						  // and value in $extravert_yes_indices, we then check if it "yes", and then increment a sum
 	  		$extravert_yes_sum++;	
 	  	}
 	}
-	if (in_array($index+1, $extravert_no_indeces)) {
+	if (in_array($index+1, $extravert_no_indices)) {
 	  	if($value == "no") {
 	  		$extravert_no_sum++;
 	  	}
 	}
-	if (in_array($index+1, $neurotism_yes_indeces)) {
+	if (in_array($index+1, $neurotism_yes_indices)) {
 	  	if($value == "yes") {
 	  		$neurotism_yes_sum++;
 	  	}
 	}
-	if (in_array($index+1, $lie_yes_indeces)) {
+	if (in_array($index+1, $lie_yes_indices)) {
 	  	if($value == "yes") {
 	  		$lie_yes_sum++;	
 	  	}
 	}
-	if (in_array($index+1, $lie_no_indeces)) {
+	if (in_array($index+1, $lie_no_indices)) {
 	  	if($value == "no") {
 	  		$lie_no_sum++;
 	  	}
