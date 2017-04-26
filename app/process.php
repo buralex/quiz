@@ -11,15 +11,11 @@
 </head>
 <body>
 <?php 
+phpinfo();
+$answers = $_POST;
 
-	$answers = $_POST;
-
-	$answersValues = array(); // array only with 'yes' or 'no'
-
-	foreach ($answers as $key => $value) {
-		array_push($answersValues, $value);
-	}
-
+	//$answersValues = array(); // array only with 'yes' or 'no'
+array_unshift($answers,"first");
 
 
 $extravert_yes_indices = array(1, 3, 8, 10, 13, 17, 22, 25, 27, 39, 44, 46, 49, 53, 56);

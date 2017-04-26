@@ -188,7 +188,8 @@ body {
   cursor: pointer; }
 
 .button-answer input[type="radio"] {
-  visibility: hidden; }
+  position: relative;
+  z-index: -10; }
 
 .button-answer input[type="radio"]:checked + label {
   background-color: #ffcece; }

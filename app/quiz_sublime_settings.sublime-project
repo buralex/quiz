@@ -1,0 +1,11 @@
+{
+	"folders":
+	[
+		{
+			"path": "D:\\OpenServer\\OpenServer\\domains\\quiz-test-task"
+		}
+	],
+	"settings": {
+        "xdebug": {"url": "http://quiz-test-task/app/"}
+    }
+}
