@@ -11,12 +11,15 @@
 </head>
 <body>
 <?php 
-phpinfo();
+
 $answers = $_POST;
+$answersValues = []; // array only with 'yes' or 'no'
 
-	//$answersValues = array(); // array only with 'yes' or 'no'
-array_unshift($answers,"first");
+foreach ($answers as $key => $value) {
+	array_push($answersValues, $value);
+}
 
+array_unshift($answersValues,"first"); // adding first element to unshift indices
 
 $extravert_yes_indices = array(1, 3, 8, 10, 13, 17, 22, 25, 27, 39, 44, 46, 49, 53, 56);
 $extravert_no_indices = array(5, 15, 20, 29, 32, 37, 41, 51);
@@ -35,35 +38,36 @@ $lie_yes_sum = 0;
 $lie_no_sum = 0;
 $lie_total_sum = 0;
 
-for ($index = 0; $index <= count($answersValues)-1; $index++) {
-	$value = $answersValues[$index];
 
-	
-	if (in_array($index+1, $extravert_yes_indices)) { // if there is a match between index of question in $answersValues 
+foreach ($answersValues as $key => $value) {
+
+	if (in_array($key, $extravert_yes_indices)) { // if there is a match between index of question in $answersValues 
 	  	if($value == "yes") {						  // and value in $extravert_yes_indices, we then check if it "yes", and then increment a sum
 	  		$extravert_yes_sum++;	
 	  	}
 	}
-	if (in_array($index+1, $extravert_no_indices)) {
+
+	if (in_array($key, $extravert_no_indices)) {
 	  	if($value == "no") {
 	  		$extravert_no_sum++;
 	  	}
 	}
-	if (in_array($index+1, $neurotism_yes_indices)) {
+	if (in_array($key, $neurotism_yes_indices)) {
 	  	if($value == "yes") {
 	  		$neurotism_yes_sum++;
 	  	}
 	}
-	if (in_array($index+1, $lie_yes_indices)) {
+	if (in_array($key, $lie_yes_indices)) {
 	  	if($value == "yes") {
 	  		$lie_yes_sum++;	
 	  	}
 	}
-	if (in_array($index+1, $lie_no_indices)) {
+	if (in_array($key, $lie_no_indices)) {
 	  	if($value == "no") {
 	  		$lie_no_sum++;
 	  	}
 	}
+
 }
 
 $extravert_total_sum = $extravert_yes_sum + $extravert_no_sum;

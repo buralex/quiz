@@ -12,7 +12,7 @@ gulp.task('browser-sync', ['styles'], function() {
 				// server: {
 				// 		baseDir: "./app"
 				// },
-				proxy: "quiz-test-task/app",
+				proxy: "http://localhost/quiz-test-task/app/",
 				notify: false
 		});
 });

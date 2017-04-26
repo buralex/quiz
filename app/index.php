@@ -1,9 +1,3 @@
-<?php
-$a = "";
-phpinfo();
-$answers = $_POST;
-?>
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
