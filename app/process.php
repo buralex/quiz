@@ -112,11 +112,11 @@ if ($lie_total_sum >= 0 && $lie_total_sum <= 3) {
 	$lie_type = "Ответам можно доверять";
 }
 
-if ($lie_total_sum >= 17 && $lie_total_sum <= 22) {
+if ($lie_total_sum >= 4 && $lie_total_sum <= 5) {
 	$lie_type = "Сомнительно";
 }
 
-if ($lie_total_sum >= 23 && $lie_total_sum <= 24) {
+if ($lie_total_sum >= 6 && $lie_total_sum <= 9) {
 	$lie_type = "Вы любите приукрасить действительность!";
 }
 
@@ -138,7 +138,7 @@ $y = $neurotism_total_sum * $point;
 		echo <<<EOT
 		<h3 class=""><span class="attent">Экстраверсия: $extravert_total_sum,</span> $extravert_type</h3>
 		<h3 class=""><span class="attent">Невротизм: $neurotism_total_sum,</span> $neurotism_type</h3>
-		<h3 class=""><span class="attent">Уровень лжи:</span> $lie_total_sum $lie_type</h3>
+		<h3 class=""><span class="attent">Уровень лжи: $lie_total_sum, </span>  $lie_type</h3>
 
 		<div class="graph-container">
 			<img class="graph" src="img/graph.jpg" alt="graph" style="">

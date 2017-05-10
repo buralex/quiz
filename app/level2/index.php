@@ -1,4 +1,21 @@
+<?php //phpinfo();
 
+var_dump($_SERVER['HTTP_HOST']);
+var_dump($_SERVER['REQUEST_URI']);
+
+
+var_dump($_SERVER['SERVER_NAME']);
+	var_dump($_SERVER['HTTP_HOST']);
+	var_dump($_SERVER['SERVER_ADDR']);
+	var_dump($_SERVER['DOCUMENT_ROOT']);
+	var_dump($_SERVER['SCRIPT_FILENAME']);
+	var_dump($_SERVER['HTTPS']);
+	
+
+
+$actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+echo $actual_link;
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,9 +25,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/jquery.min.js"></script>
+	<base href="http://buralex.tk/test/" >
 
 </head>
 <body>
+    
+    <img src="<?= $actual_link ?>img/dev.jpg" class="point" style=" ">
 
 <div class="main-wrapper">
 	<div class="box">
